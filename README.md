@@ -1,2 +1,2 @@
-#update/blue/black screen.
+# update/blue/black screen.
 use"Enter"
