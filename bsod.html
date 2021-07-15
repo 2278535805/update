@@ -69,7 +69,51 @@ document.oncontextmenu=new Function("return false")
 </SCRIPT>
 
 
+  
+  
+  
+  
+  
 
+ <script>  
+var count=0;
+var stage=1;
+var stage2=3;
+var counter=setInterval(timer, 14830); //1000 will  run it every 1 second
+var ref="Configuring updates";
+function timer()
+{
+  count=count+1;
+  if (count <= 0)
+  {
+     clearInterval(counter);
+     return;
+  }
+ document.getElementById("timer").innerHTML=count +'%';
+
+   if (count > 99)
+  {
+     stage=stage+1;
+	  document.getElementById("stage").innerHTML=stage +'';
+	 count=0;
+	  return;
+  }
+  
+     if (stage > 3)
+  {
+     stage2=68;
+     ref="Installing Updates";
+	  document.getElementById("ref").innerHTML=ref +'';
+	  document.getElementById("stage2").innerHTML=stage2 +'';
+	  return;
+  } 
+}
+</script>
+
+ 
+ 
+ 
+ 
 </head>
 <body bgcolor="#1071aa" scroll="no">
 <div class="content">
@@ -77,6 +121,13 @@ document.oncontextmenu=new Function("return false")
 <p style="font-size:100pt; margin:0; padding-bottom:20pt">:(</p>
 <p style="font-size:20pt; margin:0; padding:0">你的电脑遇到问题，需要重新启动。<br />我们只收集某些错误信息，然后你可以重新启动。</p>
 <br>0% 完成<br><br>
+
+
+<br>
+<a id="timer">0%</a> <span data-translate="_win7percent">完成</span><br />
+
+
+
 <img src="qr.png" style="float:left;" />
 <div style="float:left;margin-left:30px;width:65%;">
 <p style="font-size:14pt; color:#fff; margin-top:-30px; padding:0;line-height:32px;"><br />有关此问题的详细信息和可能的解决方法，<br>请访问<br>https://windows.com/stopcode<br><br>如果致电支持人员，请向他们提供以下信息:<br>终止代码:SYS_EXCEPTION_PONIES_NOT_HANDLED</p>
